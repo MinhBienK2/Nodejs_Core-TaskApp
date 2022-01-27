@@ -4,11 +4,16 @@ const user = process.env.USER_NAME
 const pass = process.env.PASSWORD
 
 let transporter = nodemailer.createTransport({
-    service : 'gmail',
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
     auth: {
         user, // generated ethereal user
         pass  // generated ethereal password
     },
+    tls: {
+        rejectUnauthorized: false,
+    }
 });
 
 const sendWelcomeMessage =async (email,name) => {
