@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
 const sendWelcomeMessage =async (email,name) => {
     let info = await transporter.sendMail({
         // from: `"CLUB MARVEL" < ${process.env.USER_NAME} >`, // sender address
-        from: `"CLUB MARVEL" < phamminhbien3333@gmail.com >`, // sender address
+        from: `"CLUB MARVEL" <phamminhbien3333@gmail.com>`, // sender address
         to: email, // list of receivers
         subject: "MARVEL", // Subject line
         text: `welcom ${name} to MARVEL ! Wish you a good exprerience ^.^ `, // plain text body
@@ -26,7 +26,7 @@ const sendWelcomeMessage =async (email,name) => {
 const sendCancelationEmail = async (email,name) => {
     let info = await transporter.sendMail({
         // from: `"CLUB MARVEL" < ${process.env.USER_NAME} >`, // sender address
-        from: `"CLUB MARVEL" < phamminhbien3333@gmail.com >`, // sender address
+        from: `"CLUB MARVEL" <phamminhbien3333@gmail.com>`, // sender address
         to: email, // list of receivers
         subject: "MARVEL", // Subject line
         text: `What is your matter ? ${name} . Hope you come back soon T_T `, // plain text body
